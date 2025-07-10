@@ -5,23 +5,21 @@
     Input: "aabbcc" → Output: "abc"
 */
 
-
 const removeDuplicate = (inputStr) => {
-    let  result = "";
 
-    for (let i = 0; i < inputStr.length; i++) {
+    let final = "";
 
-        let currentChar = inputStr[i];
+    for (let i = 0; i <= inputStr.length - 1; i++) {
         
-        if (!result.includes(currentChar)) {
-            result = result + currentChar;
+        let currectChar = inputStr[i];
+
+        if (!final.includes(currectChar)) {
+            final = final + currectChar;
         }
     }
-
-    console.log(`Original String : ${inputStr}`);
-    console.log(`Without duplicate : ${result}`);
     
+    console.log(`Original Word : ${inputStr}`);
+    console.log(`Final Word : ${final}`);
 }
 
-
-removeDuplicate("ABCDDCBA");
+removeDuplicate("ABCCBA")
